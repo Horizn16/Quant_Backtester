@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Processing Results</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Data Processing Results</h1>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="results-container">
+
+            <div class="table-summary">
+            <h2>Data Characteristics</h2>
+            {{ data_summary | safe }}
+            </div>
+
+            <h2>Performance Analysis</h2>
+            <img src="/{{ plot_path }}" alt="Performance Plot" class="performance-plot">
+
+            <form action="/run_strategy/" method="post">
+                <input type="submit" value="Run Strategy">
+            </form>
+            
+        </div>
+    </div>
+
+
+</body>
+</html>

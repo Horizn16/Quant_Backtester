@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qaunt Backtester</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Data Pre-processing</h1>
+        </div>
+    </header>
+
+    <div class="container">
+        <form action="/process_data/" method="post">
+            <label for="ticker">Ticker:</label>
+            <input type="text" id="ticker" name="ticker" required><br><br>
+            
+            <label for="start_date">Start Date:</label>
+            <input type="date" id="start_date" name="start_date" required><br><br>
+            
+            <label for="end_date">End Date:</label>
+            <input type="date" id="end_date" name="end_date" required><br><br>
+            
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+  
+</body>
+</html>
